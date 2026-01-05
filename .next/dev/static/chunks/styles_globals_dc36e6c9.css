@@ -1,0 +1,136 @@
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap";
+/* [project]/styles/globals.css [client] (css) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Manrope, sans-serif;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  letter-spacing: -.1rem;
+  font-size: 4rem;
+  font-weight: 550;
+  line-height: 1.1;
+}
+
+h3 {
+  letter-spacing: -.05rem;
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: 550;
+  line-height: 1.25;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+section {
+  width: 100%;
+  height: 100svh;
+  padding: 1rem;
+  position: relative;
+}
+
+.hero img, .banner-img img {
+  border-radius: 1rem;
+}
+
+.about, .outro {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.about h1 {
+  width: 65%;
+  margin: 0 auto 1.5rem;
+}
+
+.about p {
+  width: 35%;
+  margin: 0 auto;
+}
+
+.services {
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+}
+
+.service {
+  gap: 2rem;
+  width: 100%;
+  height: 100svh;
+  padding: 1rem;
+  display: flex;
+}
+
+.col {
+  border-radius: 1rem;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.service-copy {
+  width: 75%;
+}
+
+.char {
+  transition: color .15s ease-out;
+}
+
+@media (max-width: 1000px) {
+  .about h1, .about p {
+    width: 100%;
+  }
+
+  .about {
+    padding: 2rem;
+  }
+
+  .services {
+    gap: 2rem;
+  }
+
+  .service {
+    flex-direction: column;
+    gap: 4rem;
+    height: max-content;
+    padding: 0;
+  }
+
+  .service:nth-child(2), .service:nth-child(4) {
+    flex-direction: column-reverse;
+  }
+
+  .service-copy {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+/*# sourceMappingURL=styles_globals_dc36e6c9.css.map*/
