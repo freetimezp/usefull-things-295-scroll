@@ -9,6 +9,11 @@ import AnimatedCopy from "./components/AnimatedCopy";
 export default function Home() {
     const lenisRef = useRef(null);
 
+    const base =
+        (import.meta.env && import.meta.env.BASE_URL) !== undefined
+            ? import.meta.env.BASE_URL
+            : "/usefull-things-295-scroll/";
+
     useEffect(() => {
         function update(time) {
             lenisRef.current?.lenis?.raf(time * 1000);
@@ -23,9 +28,8 @@ export default function Home() {
             <ReactLenis root ref={lenisRef}></ReactLenis>
 
             <section className="hero">
-                <img src="/images/img1.jpg" alt="" />
+                <img src={`${base}` + "images/img1.jpg"} alt="" />
             </section>
-
             <section className="about">
                 <div className="header">
                     <h1>A new chapter in vibe coding..</h1>
@@ -43,11 +47,9 @@ export default function Home() {
                     </AnimatedCopy>
                 </div>
             </section>
-
             <section className="banner-img">
-                <img src="/images/img2.jpg" alt="" />
+                <img src={`${base}` + "images/img2.jpg"} alt="" />
             </section>
-
             <section className="services">
                 <div className="service">
                     <div className="col">
@@ -66,12 +68,12 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="col">
-                        <img src="/images/service.jpg" alt="" />
+                        <img src={`${base}` + "images/service.jpg"} alt="" />
                     </div>
                 </div>
                 <div className="service">
                     <div className="col">
-                        <img src="/images/service.jpg" alt="" />
+                        <img src={`${base}` + "images/service.jpg"} alt="" />
                     </div>
                     <div className="col">
                         <div className="service-copy">
@@ -106,12 +108,12 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="col">
-                        <img src="/images/service.jpg" alt="" />
+                        <img src={`${base}` + "images/service.jpg"} alt="" />
                     </div>
                 </div>
                 <div className="service">
                     <div className="col">
-                        <img src="/images/service.jpg" alt="" />
+                        <img src={`${base}` + "images/service.jpg"} alt="" />
                     </div>
                     <div className="col">
                         <div className="service-copy">
@@ -130,7 +132,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
             <section className="outro">
                 <h3>Innovation has no finish line..</h3>
             </section>
